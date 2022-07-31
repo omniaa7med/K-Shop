@@ -1,0 +1,30 @@
+@import "../../general";
+
+// ----------------------------------------------------------
+//                         Slider                          -
+// ----------------------------------------------------------
+.slideshow-container {
+  max-width: 1920px;
+  position: relative;
+  margin: auto;
+
+  .mySlides {
+    display: none;
+  }
+
+  // ----------------------------------------------------------
+  //                         slider buttons                   -
+  // ----------------------------------------------------------
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 20%;
+  }
+
+  .next {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+}

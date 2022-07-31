@@ -1,1 +1,61 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <div class="navbar__container d-flex container padding">
+    <figure class="navbar__container-logo">
+      <img src="../../assets/img/navbar/logo@2x.png" alt="logo" />
+    </figure>
+    <div class="navbar__container-search d-flex">
+      <figure>
+        <img src="../../assets/img/navbar/search.png" alt="search" />
+      </figure>
+      <input type="search" placeholder="عم تبحت ؟" />
+    </div>
+
+    <a href="#" class="navbar__container-profile">
+      <figure>
+        <img src="../../assets/img/navbar/person-24px.svg" alt="personFile" />
+      </figure>
+    </a>
+
+    <a href="#" class="navbar__container-shop">
+      سلة التسوق
+      <figure>
+        <img
+          src="../../assets/img/navbar/shopping_cart-24px.svg"
+          alt="shopCart"
+        />
+      </figure>
+    </a>
+  </div>
+  <div class="background padding">
+    <div class="navbar__links container">
+      <ul class="d-flex">
+        <li class="dropdown">
+          <a class="d-flex" href="#" dropbtn>
+            الاقسام
+            <img
+              class="down"
+              src="../../assets/img/navbar/chevron_left-24px.svg"
+            />
+          </a>
+          <div class="dropdown-content">
+            <a href="#">قائمة الأمنيات</a>
+            <a href="#">قائمة الأمنيات</a>
+          </div>
+
+        </li>
+        <li>
+          <a class="active" href="#"> الرئيسية</a>
+        </li>
+        <li>
+          <a href="#">قائمة الأمنيات</a>
+        </li>
+        <li>
+          <a href="#">تواصل معنا</a>
+        </li>
+        <li>
+          <a href="#">من نحن</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

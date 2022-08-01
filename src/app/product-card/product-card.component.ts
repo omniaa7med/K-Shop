@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../interfaces/product';
 import { ProductServiceService } from '../service/product-service.service';
-import { Observable, Subject, takeUntil } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-product-card',
@@ -15,7 +15,7 @@ export class ProductCardComponent implements OnInit {
   arr: Array<Product> = [];
   unsubscribe$ = new Subject<void>();
 
-  constructor(private _ProductServiceService: ProductServiceService) { }
+  constructor(private _ProductServiceService: ProductServiceService) {}
 
   ngOnInit(): void {
     this._ProductServiceService.cartNumber
@@ -25,37 +25,29 @@ export class ProductCardComponent implements OnInit {
       });
   }
 
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
+  }
+
   /* ---------------------------------------------------------------- */
   /*                         Fav Product Function                     */
   /* ---------------------------------------------------------------- */
+
   addFavProduct() {
-    if (this.favState) {
-      this.favState = false;
-      this.favIcon = '../../assets/img/favorite_border-24px.svg';
-    } else {
-      this.favState = true;
-      this.favIcon = '../../assets/img/favRed.svg';
-    }
+    let favProduct = this._ProductServiceService.addFavProduct(
+      this.favState,
+      this.favIcon
+    );
+    this.favState = favProduct.favState;
+    this.favIcon = favProduct.favIcon;
   }
+
+  /* ---------------------------------------------------------------- */
+  /*                 Add Product To Cart Function                     */
+  /* ---------------------------------------------------------------- */
 
   addTocart(product: Product) {
-    if (product.countIncart) {
-      product.countIncart++;
-    } else {
-      product.countIncart = 1;
-    }
-    if (this.arr.length > 0) {
-      this.arr.map((item: any) => {
-        if (item.id !== product.id) {
-          this.arr.push(product);
-          this.arr = [...new Set(this.arr.map((item: any) => item))];
-        }
-      });
-    } else {
-      this.arr.push(product);
-    }
-    console.log(this.arr)
-    this._ProductServiceService.sendCount(this.arr);
+    this._ProductServiceService.addTocart(product, this.arr);
   }
-
 }

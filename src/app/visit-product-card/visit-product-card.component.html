@@ -32,7 +32,7 @@
       <p>ج.م</p>
     </div>
     <div class="product__container-content-action d-flex margin-15">
-      <button class="shareBtn">
+      <button class="shareBtn" *ngIf="product" (click)="addTocart(product)">
         <figure>
           <img
             src="../../assets/img/add_shopping_cart-black-18dp.svg"
@@ -42,9 +42,9 @@
         </figure>
       </button>
       <div class="d-flex">
-        <button class="favBtn">
+        <button class="favBtn" (click)="addFavProduct()">
           <img
-            src="../../assets/img/favorite_border-24px.svg"
+            [src]="favIcon"
             alt="favProduct"
           />
         </button>

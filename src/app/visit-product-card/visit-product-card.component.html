@@ -27,11 +27,11 @@
       <h3>{{ product?.offer }}.00</h3>
       <p>ج.م</p>
     </div>
-    <div class="d-flex margin-0">
+    <div class="d-flex margin-10" [ngClass]="{ 'margin-0': product?.offer }">
       <h5>{{ product?.price }}.00</h5>
       <p>ج.م</p>
     </div>
-    <div class="product__container-content-action d-flex margin-15">
+    <div class="product__container-content-action d-flex margin-15" [ngClass]="{ 'margin-top': product?.offer }" >
       <button class="shareBtn" *ngIf="product" (click)="addTocart(product)">
         <figure>
           <img

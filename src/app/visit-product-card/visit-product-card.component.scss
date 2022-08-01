@@ -5,7 +5,7 @@
 // ----------------------------------------------------------
 .product__container {
   padding: 5px;
-  margin: 20px;
+  margin: 18px;
   justify-content: space-between;
   height: 140px;
   // ----------------------------------------------------------
@@ -36,7 +36,15 @@
 }
 
 .margin-15 {
-  margin: 20px 10px;
+  margin: 45px 5px 10px;}
+
+.margin-10{
+  margin: 0 0 10px 0;
+  line-height: 1;
+}
+.margin-top{
+  margin-top: 10px;
+  line-height: 1;
 }
 
 // ----------------------------------------------------------

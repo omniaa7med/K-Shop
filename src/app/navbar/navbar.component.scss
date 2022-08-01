@@ -116,7 +116,7 @@
   // ----------------------------------------------------------
   &__links {
     .down {
-      width: 10%;
+      width: 20%;
       transform: rotate(90deg);
     }
 
@@ -128,12 +128,19 @@
       li {
         width: 15%;
 
+        .active {
+          background: #efeef8;
+          padding: 10px 30px;
+          font-weight: bold;
+        }
+
         a {
           font-size: 1rem;
           text-align: center;
           letter-spacing: 0px;
           color: $primary;
           opacity: 1;
+          justify-content: space-evenly
         }
       }
     }
@@ -142,10 +149,10 @@
     //                      Navbar Dropdown                     -
     // ----------------------------------------------------------
     .dropbtn {
-      display: inline-block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
+      // display: inline-block;
+      // color: white;
+      // text-align: center;
+      // padding: 14px 16px;
     }
 
     li.dropdown {

@@ -24,14 +24,17 @@
       </figure>
     </div>
     <div *ngIf="product?.offer" class="d-flex offer">
-      <h2>{{ product?.offer }}.00</h2>
+      <h3>{{ product?.offer }}.00</h3>
       <p>ج.م</p>
     </div>
     <div class="d-flex margin-15" [ngClass]="{ 'margin-0': product?.offer }">
       <h5>{{ product?.price }}.00</h5>
       <p>ج.م</p>
     </div>
-    <div class="product__container-content-action d-flex">
+    <div
+      class="product__container-content-action d-flex"
+      [ngClass]="{ 'margin-10': product?.offer }"
+    >
       <button class="addCartBtn">
         <figure>
           <img

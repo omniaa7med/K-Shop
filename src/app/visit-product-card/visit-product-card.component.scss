@@ -1,0 +1,30 @@
+@import "../product-card/product-card.component.scss";
+
+// ----------------------------------------------------------
+//                   Product Card                           -
+// ----------------------------------------------------------
+.product__container {
+  padding: 5px;
+  margin: 15px;
+  justify-content: space-between;
+
+  &-header {
+    width: 35%;
+    margin-left: 10px;
+  }
+
+  &-content {
+    width: 60%;
+
+    &-action {
+      .favBtn {
+        margin-left: 15px
+      }
+    }
+
+  }
+}
+
+.margin-15 {
+  margin: 15px 0 10px 0;
+}

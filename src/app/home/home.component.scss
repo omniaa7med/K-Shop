@@ -6,7 +6,6 @@
 .product-List {
   background-color: $back-ground;
   padding-top: 25px;
-  height: 60vh;
 
   &__container {
     width: 80%;
@@ -20,6 +19,7 @@
 
     &-all {
       width: 80%;
+
       &_header {
         align-items: center;
         justify-content: space-between;

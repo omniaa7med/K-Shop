@@ -1,0 +1,61 @@
+@import "../../general";
+
+// ----------------------------------------------------------
+//                         Slider                           -
+// ----------------------------------------------------------
+.product-List {
+  background-color: $back-ground;
+  padding-top: 25px;
+  height: 60vh;
+
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    align-items: baseline;
+
+
+    &-visited {
+      width: 20%;
+    }
+
+    &-all {
+      width: 80%;
+      &_header {
+        align-items: center;
+        justify-content: space-between;
+
+        .divider {
+          width: 70%;
+          height: 0px;
+          border-top: 1px solid $divider-gray;
+          opacity: 1;
+        }
+
+        button {
+          padding: 5px 35px;
+          font-size: 16px;
+          font-weight: bold;
+          text-align: center;
+          letter-spacing: 0px;
+          color: $primary;
+          opacity: 1;
+          border-radius: 5px;
+          border: 1px solid $primary;
+          background: $white;
+          font-family: "Cairo", sans-serif;
+        }
+
+      }
+
+      &_list {
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .product {
+          width: 23%;
+        }
+      }
+
+    }
+  }
+}

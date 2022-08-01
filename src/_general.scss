@@ -30,7 +30,7 @@ h5 {
 }
 
 body {
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo', sans-serif !important;
   width: 1920px;
   text-align: right;
   direction: rtl;
@@ -59,4 +59,18 @@ a {
 .d-flex {
   display: flex;
   flex-wrap: wrap;
+}
+
+button,
+input {
+  font-family: "Cairo", sans-serif !important;
+  cursor: pointer;
+}
+
+.margin-15 {
+  margin: 15px 0;
+}
+
+.margin-0 {
+  margin: 0;
 }

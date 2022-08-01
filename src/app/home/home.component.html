@@ -1,2 +1,27 @@
 <app-navbar></app-navbar>
-<app-home-slider></app-home-slider>
+<main>
+  <div class="slider__container">
+    <app-home-slider></app-home-slider>
+  </div>
+  <div class="product-List">
+    <div class="product-List__container d-flex">
+      <div class="product-List__container-visited">
+        <h4>منتجات تصفحتها مؤخرا</h4>
+        <div  *ngFor="let product of products">
+          <app-visit-product-card  [product]="product"></app-visit-product-card>
+        </div>
+      </div>
+      <div class="product-List__container-all">
+        <header class="product-List__container-all_header d-flex">
+          <h1>وصل حديثا</h1>
+          <div class="divider"></div>
+          <button type="button">عرض الكل</button>
+        </header>
+        <div class="product-List__container-all_list d-flex">
+            <app-product-card class="product" *ngFor="let product of products" [product]="product"></app-product-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

@@ -1,0 +1,81 @@
+@import "../../general";
+
+// ----------------------------------------------------------
+//                   Product Card                           -
+// ----------------------------------------------------------
+.product__container {
+  background-color: $white;
+  padding: 20px;
+  border-radius: 10px 10px 0px 0px;
+  &-header {
+    position: relative;
+    // display: flex;
+
+    figure {}
+
+    .compare {
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+    }
+
+    .offer {
+      border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 58px;
+      height: 32px;
+      background: $Secondary;
+      border-radius: 16px;
+      opacity: 1;
+      color: $white;
+      font-size: 14px;
+    }
+
+    .new {
+      background: $primary-accent;
+    }
+  }
+
+  &-content {
+    .offer{
+      align-items: center;
+      color: #302ca2;
+      text-decoration: line-through;
+      h2{
+        font-weight: normal;
+      }
+    }
+    &-action{
+      justify-content: space-between;
+      align-items: center;
+      .addCartBtn {
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 0px;
+        color: $white;
+        background-color: $primary;
+        opacity: 1;
+        border-radius: 10px;
+        align-items: center;
+        display: flex;
+        padding: 5px 20px;
+        justify-content: space-between;
+        border: none;
+
+        figure {
+          width: 18%;
+        }
+      }
+      .shareBtn,.favBtn{
+        border: none;
+        background-color: transparent;
+      }
+    }
+
+  }
+}
+
+

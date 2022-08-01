@@ -9,10 +9,21 @@ import { ProductServiceService } from '../service/product-service.service';
 })
 export class HomeComponent implements OnInit {
   products: Product[] = [];
+  productList: Product[] = this._ProductServiceService.productList;
 
   constructor(private _ProductServiceService: ProductServiceService) {
-    this.products = this._ProductServiceService.productList;
+    for (let product = 0; product < this.productList.length; product++) {
+      if (product < 4) {
+        this.products.push(this.productList[product]);
+      }
+    }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+  /* ---------------------------------------------------------------- */
+  /*                         Show All Function                        */
+  /* ---------------------------------------------------------------- */
+  showAll() {
+    this.products = this._ProductServiceService.productList;
+  }
 }

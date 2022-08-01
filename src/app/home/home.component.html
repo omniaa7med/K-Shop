@@ -16,7 +16,7 @@
         <h4>منتجات تصفحتها مؤخرا</h4>
         <div class="product-List__container-visited_list">
           <app-visit-product-card
-            *ngFor="let product of products"
+            *ngFor="let product of productList"
             [product]="product"
           ></app-visit-product-card>
         </div>
@@ -28,7 +28,7 @@
         <header class="product-List__container-all_header d-flex">
           <h1>وصل حديثا</h1>
           <div class="divider"></div>
-          <button type="button">عرض الكل</button>
+          <button type="button" (click)="showAll()">عرض الكل</button>
         </header>
         <div class="product-List__container-all_list d-flex">
           <app-product-card

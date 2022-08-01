@@ -50,6 +50,9 @@ ul {
 a {
   text-decoration: none;
 }
+a:active{
+  color: $primary;
+}
 
 .container {
   width: 95%;

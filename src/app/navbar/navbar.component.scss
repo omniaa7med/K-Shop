@@ -1,16 +1,28 @@
 @import "../../general";
 
+// ----------------------------------------------------------
+//                         Navbar                           -
+// ----------------------------------------------------------
 .navbar {
   margin-top: 20px;
 
+  // ----------------------------------------------------------
+  //                      Navbar Container                    -
+  // ----------------------------------------------------------
   &__container {
     justify-content: space-between;
     align-items: center;
 
+    // ----------------------------------------------------------
+    //                         Navbar Logo                      -
+    // ----------------------------------------------------------
     &-logo {
       width: 5%;
     }
 
+    // ----------------------------------------------------------
+    //                         Navbar Search                     -
+    // ----------------------------------------------------------
     &-search {
       width: 80%;
       display: flex;
@@ -33,17 +45,22 @@
         font-size: 0.75rem;
         color: $primary;
       }
+
       ::placeholder {
         color: $primary;
         opacity: 1;
       }
+
       input:focus-visible {
         outline: none !important;
       }
     }
 
+    // ----------------------------------------------------------
+    //                       Navbar Profile                     -
+    // ----------------------------------------------------------
     &-profile {
-        background: #efeef8;
+      background: #efeef8;
       border-radius: 10px;
       padding: 8px;
       display: flex;
@@ -54,7 +71,11 @@
       }
     }
 
+    // ----------------------------------------------------------
+    //                        Navbar Shop                       -
+    // ----------------------------------------------------------
     &-shop {
+      position: relative;
       background: #efeef8;
       border-radius: 10px;
       width: 9%;
@@ -66,6 +87,21 @@
       figure {
         width: 20%;
       }
+
+      span {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        background: $primary;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+      }
     }
   }
 
@@ -75,9 +111,10 @@
     padding: 10px 0;
   }
 
+  // ----------------------------------------------------------
+  //                         Navbar Links                     -
+  // ----------------------------------------------------------
   &__links {
-
-
     .down {
       width: 10%;
       transform: rotate(90deg);
@@ -92,7 +129,7 @@
         width: 15%;
 
         a {
-          font-size: 16px;
+          font-size: 1rem;
           text-align: center;
           letter-spacing: 0px;
           color: $primary;
@@ -101,42 +138,62 @@
       }
     }
 
+    // ----------------------------------------------------------
+    //                      Navbar Dropdown                     -
+    // ----------------------------------------------------------
+    .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
   }
 }
 
+// ----------------------------------------------------------
+//                 Media Query  400px and down              -
+// ----------------------------------------------------------
+@media screen and (max-width: 599px) {}
 
+// ----------------------------------------------------------
+//                 Media Query  600px and down              -
+// ----------------------------------------------------------
+@media screen and (min-width: 600px) {}
 
+// ----------------------------------------------------------
+//                 Media Query  768px and up                -
+// ----------------------------------------------------------
+@media screen and (min-width: 768px) {}
 
-.dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-}
-
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+// ----------------------------------------------------------
+//                 Media Query  992px and up                -
+// ----------------------------------------------------------
+@media screen and (min-width: 992px) {}

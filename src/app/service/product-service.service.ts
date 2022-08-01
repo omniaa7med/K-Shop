@@ -1,11 +1,16 @@
 import { Product } from './../interfaces/product';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductServiceService {
   constructor() {}
+  productArr: Array<Product> = [];
+
+   private cart = new BehaviorSubject(this.productArr);
+  cartNumber = this.cart.asObservable();
   productList: Product[] = [
     {
       id: 1,
@@ -66,4 +71,9 @@ export class ProductServiceService {
       star: [true,true,false,false,false],
     },
   ];
+
+
+  sendCount(type: any) {
+    this.cart.next(type);
+  }
 }

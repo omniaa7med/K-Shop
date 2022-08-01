@@ -5,6 +5,7 @@ export interface Product {
   imageUrl: string;
   star?: Array<boolean>;
   offer?: number;
-  visit: boolean
+  visit: boolean;
+  countIncart?:number
 }
 [];

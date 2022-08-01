@@ -26,14 +26,14 @@
 
         .divider {
           width: 70%;
-          height: 0px;
-          border-top: 1px solid $divider-gray;
+          height: 0;
+          border-top: 0.063rem solid $divider-gray;
           opacity: 1;
         }
 
         button {
           padding: 5px 35px;
-          font-size: 16px;
+          font-size: 1rem;
           font-weight: bold;
           text-align: center;
           letter-spacing: 0px;
@@ -58,4 +58,34 @@
 
     }
   }
+}
+
+
+
+// ----------------------------------------------------------
+//                 Media Query  400px and down              -
+// ----------------------------------------------------------
+@media screen and (max-width: 599px) {
+
+}
+
+// ----------------------------------------------------------
+//                 Media Query  600px and down              -
+// ----------------------------------------------------------
+@media screen and (min-width: 600px) {
+
+}
+
+// ----------------------------------------------------------
+//                 Media Query  768px and up                -
+// ----------------------------------------------------------
+@media screen and (min-width: 768px) {
+
+}
+
+// ----------------------------------------------------------
+//                 Media Query  992px and up                -
+// ----------------------------------------------------------
+@media screen and (min-width: 992px) {
+
 }

@@ -1,10 +1,10 @@
-<div class="product__container" *ngIf="!product?.visit">
+<div class="product__container" *ngIf="product">
   <!---------------------------------------------------------->
   <!--              Product Header Visited                  -->
   <!---------------------------------------------------------->
   <div class="product__container-header">
     <figure>
-      <img [src]="product?.imageUrl" alt="productImage" />
+      <img class="productImage" [src]="product?.imageUrl" alt="productImage" />
     </figure>
     <div class="d-flex">
       <button class="compare">
@@ -23,7 +23,7 @@
   <!---------------------------------------------------------->
   <div class="product__container-content">
     <h4>{{ product?.name }}</h4>
-    <div class="d-flex margin-15" [ngClass]="{ 'margin-0': product?.offer }">
+    <div class="d-flex margin-10" [ngClass]="{ 'margin-0': product?.offer }">
       <figure *ngFor="let star of product?.star">
         <img *ngIf="star" src="../../assets/img/Star.svg" alt="star" />
         <img *ngIf="!star" src="../../assets/img/Star white.svg" alt="star" />
@@ -33,7 +33,7 @@
       <h3>{{ product?.offer }}.00</h3>
       <p>ج.م</p>
     </div>
-    <div class="d-flex margin-15" [ngClass]="{ 'margin-0': product?.offer }">
+    <div class="d-flex margin-10" [ngClass]="{ 'margin-0': product?.offer }">
       <h5>{{ product?.price }}.00</h5>
       <p>ج.م</p>
     </div>

@@ -65,6 +65,14 @@ export class ProductServiceService {
     {
       id: 7,
       name: 'تيشيرت-كم طويل-آرت وير-نسائي',
+      price: 150,
+      imageUrl: '../../assets/img/6.png',
+      star: [true, true, false, false, false],
+      visit: false,
+    },
+    {
+      id: 8,
+      name: 'تيشيرت-كم طويل-آرت وير-نسائي',
       price: 90,
       imageUrl: '../../assets/img/7.png',
       visit: true,

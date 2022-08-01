@@ -10,6 +10,8 @@
 
 :root {
   font-size: 16px;
+  width: 1920px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -31,7 +33,7 @@ h5 {
 
 body {
   font-family: 'Cairo', sans-serif !important;
-  width: 1920px;
+
   text-align: right;
   direction: rtl;
 }
@@ -50,7 +52,8 @@ ul {
 a {
   text-decoration: none;
 }
-a:active{
+
+a:active {
   color: $primary;
 }
 
@@ -70,17 +73,18 @@ input {
   cursor: pointer;
 }
 
-.margin-15 {
-  margin: 15px 0;
+.margin-10 {
+  margin: 10px 0;
 }
 
 .margin-0 {
   margin: 0;
+  line-height: 1;
 }
 
-.margin-10 {
-  margin-top: 14px;
-}
+// .margin-10 {
+//   margin-top: 10px;
+// }
 
 h4 {
   width: 99%;

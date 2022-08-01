@@ -5,15 +5,19 @@
 // ----------------------------------------------------------
 .product__container {
   padding: 5px;
-  margin: 15px;
+  margin: 20px;
   justify-content: space-between;
-
+  height: 140px;
   // ----------------------------------------------------------
   //               Product Card Visited Header                -
   // ----------------------------------------------------------
   &-header {
     width: 35%;
     margin-left: 10px;
+    height: auto;
+    .compare {
+      width: 25%;
+    }
   }
   // ----------------------------------------------------------
   //               Product Card Visited Content               -
@@ -32,7 +36,7 @@
 }
 
 .margin-15 {
-  margin: 15px 0 10px 0;
+  margin: 20px 10px;
 }
 
 // ----------------------------------------------------------

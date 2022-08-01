@@ -5,7 +5,7 @@
 // ----------------------------------------------------------
 .product-List {
   background-color: $back-ground;
-  padding-top: 25px;
+  padding: 25px 0;
 
   &__container {
     width: 80%;
@@ -15,6 +15,9 @@
 
     &-visited {
       width: 20%;
+      &_list{
+        margin-top: 25px;
+      }
     }
 
     &-all {
@@ -50,9 +53,9 @@
       &_list {
         justify-content: space-between;
         margin-top: 10px;
-
         .product {
-          width: 23%;
+          width: 23.5%;
+          margin: 10px 0;
         }
       }
 
@@ -65,27 +68,19 @@
 // ----------------------------------------------------------
 //                 Media Query  400px and down              -
 // ----------------------------------------------------------
-@media screen and (max-width: 599px) {
-
-}
+@media screen and (max-width: 599px) {}
 
 // ----------------------------------------------------------
 //                 Media Query  600px and down              -
 // ----------------------------------------------------------
-@media screen and (min-width: 600px) {
-
-}
+@media screen and (min-width: 600px) {}
 
 // ----------------------------------------------------------
 //                 Media Query  768px and up                -
 // ----------------------------------------------------------
-@media screen and (min-width: 768px) {
-
-}
+@media screen and (min-width: 768px) {}
 
 // ----------------------------------------------------------
 //                 Media Query  992px and up                -
 // ----------------------------------------------------------
-@media screen and (min-width: 992px) {
-
-}
+@media screen and (min-width: 992px) {}

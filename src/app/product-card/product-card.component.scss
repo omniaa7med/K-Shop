@@ -6,14 +6,26 @@
 .product__container {
   background-color: $white;
   padding: 20px;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px;
+  height: 455px;
 
   // ----------------------------------------------------------
   //                       Product Header                     -
   // ----------------------------------------------------------
   &-header {
     position: relative;
-
+    position: relative;
+    height: 261px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // .productImage {
+    //   height: 213.2px;
+    //   object-fit: contain;
+    // }
+figure{
+  width: 100%;
+}
     // ----------------------------------------------------------
     //                Product Header Action                     -
     // ----------------------------------------------------------
@@ -23,6 +35,9 @@
       background-color: transparent;
       position: absolute;
       top: 0;
+      width: 10%;
+    left: 0;
+    right: 0;
     }
 
     .offer {

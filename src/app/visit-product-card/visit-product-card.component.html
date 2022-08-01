@@ -1,4 +1,7 @@
 <div class="product__container d-flex" *ngIf="product?.visit">
+  <!---------------------------------------------------------->
+  <!--                  Product Header                      -->
+  <!---------------------------------------------------------->
   <div class="product__container-header">
     <figure>
       <img [src]="product?.imageUrl" alt="productImage" />
@@ -15,18 +18,20 @@
       <button class="offer new" *ngIf="!product?.offer">جديد</button>
     </div>
   </div>
+  <!---------------------------------------------------------->
+  <!--                  Product Content                     -->
+  <!---------------------------------------------------------->
   <div class="product__container-content">
     <h4>{{ product?.name }}</h4>
-
     <div *ngIf="product?.offer" class="d-flex offer">
       <h3>{{ product?.offer }}.00</h3>
       <p>ج.م</p>
     </div>
-    <div class="d-flex" >
+    <div class="d-flex">
       <h5>{{ product?.price }}.00</h5>
       <p>ج.م</p>
     </div>
-    <div class="product__container-content-action d-flex margin-15" >
+    <div class="product__container-content-action d-flex margin-15">
       <button class="shareBtn">
         <figure>
           <img

@@ -1,4 +1,7 @@
 <div class="product__container" *ngIf="!product?.visit">
+  <!---------------------------------------------------------->
+  <!--              Product Header Visited                  -->
+  <!---------------------------------------------------------->
   <div class="product__container-header">
     <figure>
       <img [src]="product?.imageUrl" alt="productImage" />
@@ -15,6 +18,9 @@
       <button class="offer new" *ngIf="!product?.offer">جديد</button>
     </div>
   </div>
+  <!---------------------------------------------------------->
+  <!--               Product Visited Content                -->
+  <!---------------------------------------------------------->
   <div class="product__container-content">
     <h4>{{ product?.name }}</h4>
     <div class="d-flex margin-15" [ngClass]="{ 'margin-0': product?.offer }">

@@ -8,11 +8,15 @@
   padding: 20px;
   border-radius: 10px 10px 0px 0px;
 
+  // ----------------------------------------------------------
+  //                       Product Header                     -
+  // ----------------------------------------------------------
   &-header {
     position: relative;
-    // display: flex;
 
-    figure {}
+    // ----------------------------------------------------------
+    //                Product Header Action                     -
+    // ----------------------------------------------------------
 
     .compare {
       border: none;
@@ -32,7 +36,7 @@
       border-radius: 16px;
       opacity: 1;
       color: $white;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
 
     .new {
@@ -40,6 +44,9 @@
     }
   }
 
+  // ----------------------------------------------------------
+  //                       Product Content                     -
+  // ----------------------------------------------------------
   &-content {
     .offer {
       align-items: center;
@@ -47,18 +54,21 @@
       text-decoration: line-through;
 
       h3 {
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: normal;
       }
     }
 
+    // ----------------------------------------------------------
+    //                  Product Content Action                  -
+    // ----------------------------------------------------------
     &-action {
       justify-content: space-between;
       align-items: center;
 
       .addCartBtn {
         text-align: center;
-        font-size: 18px;
+        font-size: 1.125rem;
         letter-spacing: 0px;
         color: $white;
         background-color: $primary;
@@ -81,6 +91,5 @@
         background-color: transparent;
       }
     }
-
   }
 }

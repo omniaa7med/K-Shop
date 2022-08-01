@@ -41,7 +41,7 @@
       class="product__container-content-action d-flex"
       [ngClass]="{ 'margin-10': product?.offer }"
     >
-      <button class="addCartBtn">
+      <button class="addCartBtn" *ngIf="product" (click)="addTocart(product)">
         <figure>
           <img
             src="../../assets/img/add_shopping_white18dp.svg"
@@ -53,8 +53,8 @@
       <button class="shareBtn">
         <img src="../../assets/img/share-24px.svg" alt="shareProduct" />
       </button>
-      <button class="favBtn">
-        <img src="../../assets/img/favorite_border-24px.svg" alt="favProduct" />
+      <button class="favBtn" (click)="addFavProduct()">
+        <img [src]="favIcon" alt="favProduct" />
       </button>
     </div>
   </div>

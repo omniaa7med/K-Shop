@@ -1,21 +1,21 @@
 @import "../../general";
 
 // ----------------------------------------------------------
-//                         Slider                           -
+//                   Product List                           -
 // ----------------------------------------------------------
 .product-List {
   background-color: $back-ground;
   padding: 25px 0;
 
   &__container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     align-items: baseline;
 
-
     &-visited {
       width: 20%;
-      &_list{
+
+      &_list {
         margin-top: 25px;
       }
     }
@@ -47,40 +47,215 @@
           background: $white;
           font-family: "Cairo", sans-serif;
         }
-
       }
 
       &_list {
         justify-content: space-between;
         margin-top: 10px;
+
         .product {
           width: 23.5%;
           margin: 10px 0;
         }
       }
-
     }
   }
 }
 
-
-
 // ----------------------------------------------------------
-//                 Media Query  400px and down              -
+//                 Media Query  500px and down              -
 // ----------------------------------------------------------
-@media screen and (max-width: 599px) {}
+@media screen and (max-width: 500px) {
+  .product-List {
+    &__container {
+      justify-content: center;
+
+      &-all {
+        &_header {
+          .divider {
+            display: none;
+          }
+        }
+
+        &_list {
+          .product {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
 
 // ----------------------------------------------------------
 //                 Media Query  600px and down              -
 // ----------------------------------------------------------
-@media screen and (min-width: 600px) {}
+@media screen and (max-width: 768px) {
+  .product-List {
+    &__container {
+      &-visited {
+        width: 100%;
+        margin-top: 10px;
+        order: 1;
+      }
+
+      &-all {
+        width: 100%;
+        order: 0;
+
+        &_header {
+          .divider {
+            width: 60%;
+          }
+
+          button {
+            padding: 5px 10px;
+          }
+        }
+
+        &_list {
+          .product {
+            width: 49%;
+          }
+        }
+      }
+    }
+  }
+}
 
 // ----------------------------------------------------------
 //                 Media Query  768px and up                -
 // ----------------------------------------------------------
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+  .product-List {
+    &__container {
+      &-visited {
+        width: 100%;
+        text-align: right;
+        order: 1;
+      }
+
+      &-all {
+        width: 100%;
+        order: 0;
+
+        &_header {
+          .divider {
+            width: 65%;
+          }
+
+          button {
+            padding: 5px 10px;
+          }
+        }
+
+        &_list {
+          .product {
+            width: 49%;
+          }
+        }
+      }
+    }
+  }
+}
 
 // ----------------------------------------------------------
 //                 Media Query  992px and up                -
 // ----------------------------------------------------------
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+  .product-List {
+    &__container {
+      &-visited {
+        width: 100%;
+        order: 1;
+
+        &_list {
+          margin-top: 25px;
+        }
+      }
+
+      &-all {
+        width: 100%;
+        order: 0;
+
+        &_header {
+          align-items: center;
+          justify-content: space-between;
+
+          .divider {
+            width: 65%;
+          }
+
+          button {
+            padding: 5px 35px;
+          }
+        }
+
+        &_list {
+          margin-top: 10px;
+
+          .product {
+            width: 32%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------
+//                 Media Query  1200px and up                -
+// ----------------------------------------------------------
+@media screen and (min-width: 1200px) {
+  .product-List {
+    &__container {
+      &-visited {
+        width: 20%;
+        order: 0;
+      }
+
+      &-all {
+        width: 80%;
+        order: 1;
+
+        &_header {
+          align-items: center;
+          justify-content: space-between;
+
+          .divider {
+            width: 65%;
+          }
+
+          button {
+            padding: 5px 35px;
+          }
+        }
+
+        &_list {
+          margin-top: 10px;
+
+          .product {
+            width: 23.5%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------
+//                 Media Query  1500px and up                -
+// ----------------------------------------------------------
+@media screen and (min-width: 1500px) {
+  .product-List {
+    &__container {
+      &-all {
+        &_header {
+          .divider {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}

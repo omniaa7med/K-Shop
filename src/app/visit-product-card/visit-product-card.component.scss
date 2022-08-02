@@ -5,7 +5,7 @@
 // ----------------------------------------------------------
 .product__container {
   padding: 5px;
-  margin: 18px;
+  margin: 18px 0 18px 18px;
   justify-content: space-between;
   height: 140px;
   // ----------------------------------------------------------
@@ -24,6 +24,9 @@
   // ----------------------------------------------------------
   &-content {
     width: 60%;
+    h4 {
+      width: 90%;
+    }
     // --------------------------------------------------------
     //         Product Card Visited Content Action            -
     // --------------------------------------------------------
@@ -36,37 +39,97 @@
 }
 
 .margin-15 {
-  margin: 45px 5px 10px;}
+  margin: 45px 5px 10px;
+}
 
-.margin-10{
+.margin-10 {
   margin: 0 0 10px 0;
   line-height: 1;
 }
-.margin-top{
+.margin-top {
   margin-top: 10px;
   line-height: 1;
 }
 
 // ----------------------------------------------------------
-//                 Media Query  400px and down              -
+//                 Media Query  500px and down              -
 // ----------------------------------------------------------
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 500px) {
+  .product__container {
+    margin: 18px 0;
+
+    &-header {
+      .offer {
+        margin: 15px 0;
+      }
+      figure{
+        width: 70%;
+      }
+    }
+
+    &-content {
+      .offer {
+        margin: 5px 0;
+      }
+
+      &-action {
+        margin: 30px 0;
+
+        .addCartBtn {
+          justify-content: center;
+          padding: 5px;
+
+          figure {
+            width: 100%;
+          }
+
+          span {
+            display: none;
+          }
+        }
+
+        .tooltiptext {
+          width: 150px;
+        }
+      }
+    }
+  }
 }
 
 // ----------------------------------------------------------
-//                 Media Query  600px and down              -
+//                 Media Query  500px and down              -
 // ----------------------------------------------------------
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 768px)  {
+  .product__container {
+    margin: 18px 0;
+     &-header {
+      width: 20%;
+      height: auto;
+      margin: 0;
+      figure{
+        width: 70%;
+      }
+      .compare {
+        width: 25%;
+      }
+    }
+
+    &-content {
+      width: 80%;
+      h4 {
+        width: 90%;
+      }
+      &-action {
+        .favBtn {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
 }
 
 // ----------------------------------------------------------
-//                 Media Query  768px and up                -
+//                 Media Query  500px and down              -
 // ----------------------------------------------------------
-@media screen and (min-width: 768px) {
-}
 
-// ----------------------------------------------------------
-//                 Media Query  992px and up                -
-// ----------------------------------------------------------
-@media screen and (min-width: 992px) {
-}
+

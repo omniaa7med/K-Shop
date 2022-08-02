@@ -41,23 +41,26 @@
       class="product__container-content-action d-flex"
       [ngClass]="{ 'margin-10': product?.offer }"
     >
-      <button class="addCartBtn" *ngIf="product" (click)="addTocart(product)">
+      <button
+        class="addCartBtn"
+        *ngIf="product"
+        (click)="addTocart(product)"
+        title="أضف للسلة"
+      >
         <figure>
           <img
             src="../../assets/img/add_shopping_white18dp.svg"
             alt="addToCart"
+            title="أضف للسلة"
           />
         </figure>
-        أضف للسلة
+        <span> أضف للسلة </span>
       </button>
 
-      <button type="button" class="shareBtn tooltip" title="shareBtn">
+      <a class="shareBtn tooltip" title="shareBtn">
         <ul class="tooltiptext">
           <li class="social">
-            <a
-              href="https://facebook.com"
-              title="فيس بوك"  target="_blank"
-            >
+            <a href="https://facebook.com" title="فيس بوك" target="_blank">
               <img
                 src="../../assets/img/social/facebook.png"
                 alt="facebook"
@@ -66,10 +69,7 @@
             </a>
           </li>
           <li class="social">
-            <a
-              href="https://www.messenger.com"
-              title="ماسنجير"  target="_blank"
-            >
+            <a href="https://www.messenger.com" title="ماسنجير" target="_blank">
               <img
                 src="../../assets/img/social/messenger.png"
                 alt="messenger"
@@ -78,7 +78,7 @@
             </a>
           </li>
           <li class="social">
-            <a href="https://gmail.com"  target="_blank">
+            <a href="https://gmail.com" target="_blank">
               <img
                 src="../../assets/img/social/gmail.png"
                 alt="gmail"
@@ -87,7 +87,7 @@
             </a>
           </li>
           <li class="social">
-            <a href="https://web.whatsapp.com"  target="_blank" >
+            <a href="https://web.whatsapp.com" target="_blank">
               <img
                 src="../../assets/img/social/whatsapp.png"
                 alt="whatsapp"
@@ -96,7 +96,7 @@
             </a>
           </li>
           <li class="social">
-            <a href="https://www.linkedin.com/" target="_blank" >
+            <a href="https://www.linkedin.com/" target="_blank">
               <img
                 src="../../assets/img/social/linkedin.png"
                 alt="linkedin"
@@ -106,7 +106,7 @@
           </li>
         </ul>
         <img src="../../assets/img/share-24px.svg" alt="shareProduct" />
-      </button>
+      </a>
       <button class="favBtn" (click)="addFavProduct()">
         <img [src]="favIcon" alt="favProduct" />
       </button>

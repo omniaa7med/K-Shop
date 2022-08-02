@@ -1,48 +1,50 @@
 <nav class="navbar">
-  <div class="navbar__container d-flex container padding">
-    <!---------------------------------------------------------->
-    <!--                    Navbar Logo                       -->
-    <!---------------------------------------------------------->
-    <a href="#" class="navbar__container-logo">
-      <img src="../../assets/img/navbar/logo@2x.png" alt="logo" />
-    </a>
-    <!---------------------------------------------------------->
-    <!--                  Navbar Search                       -->
-    <!---------------------------------------------------------->
-    <div class="navbar__container-search d-flex">
-      <figure>
-        <img src="../../assets/img/navbar/search.png" alt="search" />
-      </figure>
-      <input
-        type="search"
-        placeholder="عم تبحت ؟"
-        (keyup)="searchProduct($event)"
-      />
-    </div>
-    <!---------------------------------------------------------->
-    <!--                  Navbar Profile Icon                 -->
-    <!---------------------------------------------------------->
-    <a href="#" class="navbar__container-profile">
-      <figure>
-        <img src="../../assets/img/navbar/person-24px.svg" alt="personFile" />
-      </figure>
-    </a>
-    <!---------------------------------------------------------->
-    <!--                  Navbar Cart Icon                    -->
-    <!---------------------------------------------------------->
-    <a href="#" class="navbar__container-shop">
-      <div> سلة التسوق</div>
-
-      <figure>
-        <img
-          src="../../assets/img/navbar/shopping_cart-24px.svg"
-          alt="shopCart"
+  <div class="navbar__background">
+    <div class="navbar__container d-flex container">
+      <!---------------------------------------------------------->
+      <!--                    Navbar Logo                       -->
+      <!---------------------------------------------------------->
+      <a href="#" class="navbar__container-logo">
+        <img src="../../assets/img/navbar/logo@2x.png" alt="logo" />
+      </a>
+      <!---------------------------------------------------------->
+      <!--                  Navbar Search                       -->
+      <!---------------------------------------------------------->
+      <div class="navbar__container-search d-flex">
+        <figure>
+          <img src="../../assets/img/navbar/search.png" alt="search" />
+        </figure>
+        <input
+          type="search"
+          placeholder="عم تبحت ؟"
+          (keyup)="searchProduct($event)"
         />
-      </figure>
-      <span *ngIf="count">
-        {{ count == 0 || count == null ? "" : count }}
-      </span>
-    </a>
+      </div>
+      <!---------------------------------------------------------->
+      <!--                  Navbar Profile Icon                 -->
+      <!---------------------------------------------------------->
+      <a href="#" class="navbar__container-profile">
+        <figure>
+          <img src="../../assets/img/navbar/person-24px.svg" alt="personFile" />
+        </figure>
+      </a>
+      <!---------------------------------------------------------->
+      <!--                  Navbar Cart Icon                    -->
+      <!---------------------------------------------------------->
+      <a href="#" class="navbar__container-shop">
+        <div>سلة التسوق</div>
+
+        <figure>
+          <img
+            src="../../assets/img/navbar/shopping_cart-24px.svg"
+            alt="shopCart"
+          />
+        </figure>
+        <span *ngIf="count">
+          {{ count == 0 || count == null ? "" : count }}
+        </span>
+      </a>
+    </div>
   </div>
   <!---------------------------------------------------------->
   <!--                  Navbar Navigation                   -->
@@ -78,10 +80,9 @@
           <a href="#">من نحن</a>
         </li>
         <a href="#" class="icon" (click)="navbar()">
-          <img src="../../assets/img/navbar/menu.png" alt="menu">
-         </a>
+          <img src="../../assets/img/navbar/menu.png" alt="menu" />
+        </a>
       </ul>
-
     </div>
   </div>
 </nav>

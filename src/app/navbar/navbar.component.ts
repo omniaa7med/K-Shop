@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
   }
   searchProduct(e: any) {
     console.log(e.target.value);
-    if(e.target.value != ''){
+    if (e.target.value != '') {
       let Arr: Array<Product> = []
       let arr = this._ProductServiceService.productList
       arr.filter(x => {
@@ -42,10 +42,18 @@ export class NavbarComponent implements OnInit {
 
       })
       this._ProductServiceService.sendProductSearch(Arr);
-    }else{
+    } else {
       this._ProductServiceService.sendProductSearch(this._ProductServiceService.productList);
 
     }
 
+  }
+  navbar() {
+    let x = document.getElementById("myTopnav") as HTMLAreaElement;
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
   }
 }

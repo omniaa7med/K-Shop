@@ -107,8 +107,7 @@
 
   .background {
     background: $back-ground;
-    // box-shadow: 0px 2px 20px $shadow;
-    padding: 10px 0;
+    padding: 0;
   }
 
   // ----------------------------------------------------------
@@ -121,7 +120,9 @@
     }
 
     ul {
+      display: flex;
       width: 40%;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
 
@@ -131,6 +132,10 @@
         .active {
           background: #efeef8;
           padding: 10px 30px;
+          font-weight: bold;
+        }
+
+        a:hover {
           font-weight: bold;
         }
 
@@ -148,15 +153,9 @@
     // ----------------------------------------------------------
     //                      Navbar Dropdown                     -
     // ----------------------------------------------------------
-    .dropbtn {
-      // display: inline-block;
-      // color: white;
-      // text-align: center;
-      // padding: 14px 16px;
-    }
 
     li.dropdown {
-      display: inline-block;
+      // display: inline-block;
     }
 
     .dropdown-content {
@@ -164,7 +163,7 @@
       position: absolute;
       background-color: #f9f9f9;
       min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
 
@@ -182,29 +181,302 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+    .topnav {
+      overflow: hidden;
+    }
+
+    .topnav li a {
+      display: flex;
+    }
+
+    .topnav .icon {
+      display: none;
+      float: left;
+      padding: 5px;
+    }
   }
 }
 
 // ----------------------------------------------------------
-//                 Media Query  400px and down              -
+//                 Media Query  500px and down              -
 // ----------------------------------------------------------
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 500px) {
+  .navbar {
+    &__container {
+      &-logo {
+        width: 13% !important;
+      }
+
+      &-shop {
+        width: unset !important;
+        padding: 5px;
+
+        div {
+          display: none;
+        }
+
+        figure {
+          width: 100% !important;
+        }
+      }
+    }
+  }
 }
 
 // ----------------------------------------------------------
 //                 Media Query  600px and down              -
 // ----------------------------------------------------------
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
+  .navbar {
+    &__container {
+      &-logo {
+        width: 10%;
+      }
+
+      &-search {
+        width: 55%;
+
+        figure {
+          width: 3%;
+        }
+      }
+
+      &-profile {
+        padding: 5px;
+      }
+
+      &-shop {
+        width: 20%;
+
+        figure {
+          width: 15%;
+        }
+      }
+    }
+
+    &__links {
+      .down {
+        width: 4%;
+        transform: rotate(90deg);
+      }
+
+      ul {
+        display: block;
+        width: 100%;
+
+        li {
+          width: 100%;
+        }
+      }
+    }
+
+    .topnav.responsive {
+      position: relative;
+    }
+
+    .topnav li {
+      display: none;
+    }
+
+    .topnav a.icon {
+      float: left;
+      display: block;
+    }
+
+    .topnav.responsive li a.icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .topnav.responsive li {
+      float: none;
+      display: block;
+      text-align: right;
+    }
+  }
 }
 
 // ----------------------------------------------------------
-//                 Media Query  768px and up                -
+//                 Media Query  600px and up              -
 // ----------------------------------------------------------
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
+  .navbar {
+    &__container {
+      &-logo {
+        width: 10%;
+      }
+
+      &-search {
+        width: 60%;
+
+        figure {
+          width: 2%;
+        }
+      }
+
+      &-profile {
+        padding: 5px;
+      }
+
+      &-shop {
+        width: 20%;
+
+        figure {
+          width: 15%;
+        }
+      }
+    }
+
+    &__links {
+      ul {
+        width: 100%;
+
+        li {
+          width: unset;
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------
+//                 Media Query  786px and up              -
+// ----------------------------------------------------------
+@media screen and (min-width: 786px) {
+  .navbar {
+    &__container {
+      &-logo {
+        width: 8%;
+      }
+
+      &-search {
+        width: 60%;
+
+        figure {
+          width: 2%;
+        }
+      }
+
+      &-shop {
+        width: 20%;
+      }
+    }
+
+    &__links {
+      ul {
+        width: 60%;
+
+        li {
+          width: unset;
+        }
+      }
+    }
+  }
 }
 
 // ----------------------------------------------------------
 //                 Media Query  992px and up                -
 // ----------------------------------------------------------
 @media screen and (min-width: 992px) {
+  .navbar {
+    &__container {
+      &-logo {
+        width: 6%;
+      }
+
+      &-search {
+        width: 70%;
+
+        figure {
+          width: 1%;
+        }
+      }
+
+      &-shop {
+        width: 15%;
+      }
+    }
+
+    &__links {
+      ul {
+        width: 50%;
+
+        li {
+          width: unset;
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------
+//                 Media Query  1200px and up               -
+// ----------------------------------------------------------
+@media screen and (min-width: 1200px) {
+  .navbar {
+    &__container {
+      &-logo {
+        width: 5%;
+      }
+
+      &-search {
+        width: 80%;
+
+        figure {
+          width: 1%;
+        }
+      }
+
+      &-shop {
+        width: 10%;
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------
+//                 Media Query  1500px and up               -
+// ----------------------------------------------------------
+@media screen and (min-width: 1500px) {
+  .navbar {
+    &__container {
+      &-logo {
+        width: 5%;
+      }
+
+      &-search {
+        width: 80%;
+
+        figure {
+          width: 1%;
+        }
+      }
+
+      &-profile {
+        figure {
+          width: 100%;
+        }
+      }
+
+      &-shop {
+        width: 9%;
+
+        figure {
+          width: 20%;
+        }
+      }
+    }
+
+    &__links {
+      ul {
+        width: 35%;
+
+        li {
+          width: unset;
+        }
+      }
+    }
+  }
 }

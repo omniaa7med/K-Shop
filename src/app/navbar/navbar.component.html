@@ -13,7 +13,11 @@
       <figure>
         <img src="../../assets/img/navbar/search.png" alt="search" />
       </figure>
-      <input type="search" placeholder="عم تبحت ؟" (keyup)="searchProduct($event)"/>
+      <input
+        type="search"
+        placeholder="عم تبحت ؟"
+        (keyup)="searchProduct($event)"
+      />
     </div>
     <!---------------------------------------------------------->
     <!--                  Navbar Profile Icon                 -->
@@ -27,7 +31,8 @@
     <!--                  Navbar Cart Icon                    -->
     <!---------------------------------------------------------->
     <a href="#" class="navbar__container-shop">
-      سلة التسوق
+      <div> سلة التسوق</div>
+
       <figure>
         <img
           src="../../assets/img/navbar/shopping_cart-24px.svg"
@@ -42,9 +47,10 @@
   <!---------------------------------------------------------->
   <!--                  Navbar Navigation                   -->
   <!---------------------------------------------------------->
+
   <div class="background padding">
     <div class="navbar__links container">
-      <ul class="d-flex">
+      <ul class="topnav" id="myTopnav">
         <li class="dropdown">
           <a class="d-flex dropbtn" href="#">
             الاقسام
@@ -71,7 +77,11 @@
         <li>
           <a href="#">من نحن</a>
         </li>
+        <a href="#" class="icon" (click)="navbar()">
+          <img src="../../assets/img/navbar/menu.png" alt="menu">
+         </a>
       </ul>
+
     </div>
   </div>
 </nav>

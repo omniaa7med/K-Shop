@@ -11,6 +11,10 @@ export class ProductServiceService {
 
   private cart = new BehaviorSubject(this.productArr);
   cartNumber = this.cart.asObservable();
+
+  productSearch = new BehaviorSubject(this.productArr);
+  prodSearch = this.productSearch.asObservable();
+
   productList: Product[] = [
     {
       id: 1,
@@ -84,6 +88,10 @@ export class ProductServiceService {
     this.cart.next(type);
   }
 
+  sendProductSearch(arr: any) {
+    this.productSearch.next(arr);
+  }
+
   /* ---------------------------------------------------------------- */
   /*                         Fav Product Function                     */
   /* ---------------------------------------------------------------- */
@@ -119,7 +127,7 @@ export class ProductServiceService {
     } else {
       arr.push(product);
     }
-    console.log(arr);
+    // console.log(arr);
     this.sendCount(arr);
   }
 }

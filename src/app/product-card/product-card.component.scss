@@ -23,9 +23,9 @@
     //   height: 213.2px;
     //   object-fit: contain;
     // }
-figure{
-  width: 100%;
-}
+    figure {
+      width: 100%;
+    }
     // ----------------------------------------------------------
     //                Product Header Action                     -
     // ----------------------------------------------------------
@@ -36,12 +36,13 @@ figure{
       position: absolute;
       top: 0;
       width: 10%;
-    left: 0;
-    right: 0;
+      left: 0;
+      right: 0;
     }
 
     .offer {
-      border: none;
+      display: flex;
+      justify-content: center;
       position: absolute;
       top: 0;
       left: 0;
@@ -55,6 +56,8 @@ figure{
     }
 
     .new {
+      display: flex;
+      justify-content: center;
       background: $primary-accent;
     }
   }

@@ -1,11 +1,10 @@
 @import "./variables";
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
 
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-
 }
 
 :root {
@@ -32,7 +31,7 @@ h5 {
 }
 
 body {
-  font-family: 'Cairo', sans-serif !important;
+  font-family: "Cairo", sans-serif !important;
 
   text-align: right;
   direction: rtl;
@@ -90,5 +89,36 @@ h4 {
   width: 99%;
   white-space: nowrap;
   overflow: hidden;
+}
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  // border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  visibility: hidden;
+  width: 200px;
+  background-color: #f6f6f6;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.social {
+  padding: 0 5px;
 }

@@ -19,7 +19,14 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this._ProductServiceService.prodSearch.subscribe(x => {
+      console.log(x);
+      if (x.length > 0) {
+        this.products = x
+      }
+    })
+  }
   /* ---------------------------------------------------------------- */
   /*                         Show All Function                        */
   /* ---------------------------------------------------------------- */

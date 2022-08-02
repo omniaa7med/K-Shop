@@ -14,8 +14,8 @@
           title="أضف للمقارنة"
         />
       </button>
-      <button class="offer" *ngIf="product?.offer">عرض</button>
-      <button class="offer new" *ngIf="!product?.offer">جديد</button>
+      <div class="offer" *ngIf="product?.offer">عرض</div>
+      <div class="offer new" *ngIf="!product?.offer">جديد</div>
     </div>
   </div>
   <!---------------------------------------------------------->
@@ -48,7 +48,60 @@
             alt="favProduct"
           />
         </button>
-        <button class="shareBtn">
+        <button class="shareBtn tooltip" title="shareBtn">
+          <ul class="tooltiptext">
+            <li class="social">
+              <a
+                href="https://facebook.com"
+                title="فيس بوك"  target="_blank"
+              >
+                <img
+                  src="../../assets/img/social/facebook.png"
+                  alt="facebook"
+                  title="فيس بوك"
+                />
+              </a>
+            </li>
+            <li class="social">
+              <a
+                href="https://www.messenger.com"
+                title="ماسنجير"  target="_blank"
+              >
+                <img
+                  src="../../assets/img/social/messenger.png"
+                  alt="messenger"
+                  title="ماسنجير"
+                />
+              </a>
+            </li>
+            <li class="social">
+              <a href="https://gmail.com"  target="_blank">
+                <img
+                  src="../../assets/img/social/gmail.png"
+                  alt="gmail"
+                  title="جوجل ميل"
+                />
+              </a>
+            </li>
+            <li class="social">
+              <a href="https://web.whatsapp.com"  target="_blank" >
+                <img
+                  src="../../assets/img/social/whatsapp.png"
+                  alt="whatsapp"
+                  title="واتس اب"
+                />
+              </a>
+            </li>
+            <li class="social">
+              <a href="https://www.linkedin.com/" target="_blank" >
+                <img
+                  src="../../assets/img/social/linkedin.png"
+                  alt="linkedin"
+                  title="لينكد ان"
+                />
+              </a>
+            </li>
+          </ul>
           <img src="../../assets/img/share-24px.svg" alt="shareProduct" />
         </button>
       </div>

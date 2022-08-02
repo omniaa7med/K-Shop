@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
+import { Product } from '../interfaces/product';
 import { ProductServiceService } from '../service/product-service.service';
 
 @Component({
@@ -21,9 +22,30 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
+  }
+  searchProduct(e: any) {
+    console.log(e.target.value);
+    if(e.target.value != ''){
+      let Arr: Array<Product> = []
+      let arr = this._ProductServiceService.productList
+      arr.filter(x => {
+        console.log(x.name.search(e.target.name));
+        if (x.name === e.target.value) {
+          Arr.push(x)
+        } else {
+          Arr = []
+        }
+
+      })
+      this._ProductServiceService.sendProductSearch(Arr);
+    }else{
+      this._ProductServiceService.sendProductSearch(this._ProductServiceService.productList);
+
+    }
+
   }
 }

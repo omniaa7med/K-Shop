@@ -8,6 +8,7 @@
   margin: 18px 0 18px 18px;
   justify-content: space-between;
   height: 140px;
+
   // ----------------------------------------------------------
   //               Product Card Visited Header                -
   // ----------------------------------------------------------
@@ -15,18 +16,22 @@
     width: 35%;
     margin-left: 10px;
     height: auto;
+
     .compare {
       width: 25%;
     }
   }
+
   // ----------------------------------------------------------
   //               Product Card Visited Content               -
   // ----------------------------------------------------------
   &-content {
     width: 60%;
+
     h4 {
       width: 90%;
     }
+
     // --------------------------------------------------------
     //         Product Card Visited Content Action            -
     // --------------------------------------------------------
@@ -46,6 +51,7 @@
   margin: 0 0 10px 0;
   line-height: 1;
 }
+
 .margin-top {
   margin-top: 10px;
   line-height: 1;
@@ -59,10 +65,7 @@
     margin: 18px 0;
 
     &-header {
-      .offer {
-        margin: 15px 0;
-      }
-      figure{
+      figure {
         width: 70%;
       }
     }
@@ -99,26 +102,32 @@
 // ----------------------------------------------------------
 //                 Media Query  500px and down              -
 // ----------------------------------------------------------
-@media screen and (max-width: 768px)  {
+@media screen and (max-width: 768px) {
   .product__container {
     margin: 18px 0;
-     &-header {
+
+    &-header {
       width: 20%;
       height: auto;
       margin: 0;
-      figure{
+
+      figure {
         width: 70%;
       }
+
       .compare {
-        width: 25%;
+        width: 15%;
       }
     }
 
     &-content {
       width: 80%;
+      padding: 10px;
+
       h4 {
         width: 90%;
       }
+
       &-action {
         .favBtn {
           margin-left: 15px;
@@ -129,7 +138,141 @@
 }
 
 // ----------------------------------------------------------
-//                 Media Query  500px and down              -
+//                 Media Query  1200px and down                -
 // ----------------------------------------------------------
+@media screen and (max-width: 1200px) {
+  .product__container {
+    margin: 18px 0;
 
+    &-header {
+      width: 20%;
+      height: auto;
+      margin: 0;
 
+      figure {
+        width: 70%;
+      }
+
+      .compare {
+        width: 15%;
+      }
+
+      .offer {
+        width: 40px;
+        height: 20px;
+      }
+    }
+
+    &-content {
+      width: 80%;
+      padding: 10px;
+
+      h4 {
+        width: 90%;
+      }
+
+      &-action {
+        .favBtn {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------
+//                 Media Query  992 and up                  -
+// ----------------------------------------------------------
+@media screen and (min-width: 992px) {
+  .product__container {
+    &-header {
+      figure {
+        width: 50%;
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------
+//                 Media Query  1200px and up               -
+// ----------------------------------------------------------
+@media screen and (min-width: 1200px) {
+  .product__container {
+    margin: 18px 0 18px 18px;
+
+    &-header {
+      width: 25%;
+      height: auto;
+      margin: 0;
+
+      figure {
+        width: 100%;
+      }
+
+      .compare {
+        width: 20%;
+      }
+
+      .offer {
+        width: 40px;
+        height: 20px;
+      }
+    }
+
+    &-content {
+      width: 75%;
+      padding: 0;
+
+      h4 {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &-action {
+        .favBtn {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------
+//                 Media Query  1500px and up               -
+// ----------------------------------------------------------
+@media screen and (min-width: 1500px) {
+  .product__container {
+    &-header {
+      width: 22%;
+      height: auto;
+      margin: 0;
+
+      .compare {
+        width: 20%;
+      }
+
+      .offer {
+        width: 40px;
+        height: 20px;
+      }
+    }
+
+    &-content {
+      width: 78%;
+      padding: 0;
+
+      h4 {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &-action {
+        .favBtn {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}

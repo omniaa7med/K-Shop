@@ -27,33 +27,43 @@ export class NavbarComponent implements OnInit {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
   }
+
+  /* ---------------------------------------------------------------- */
+  /*                         search Function                          */
+  /* ---------------------------------------------------------------- */
+
   searchProduct(e: any) {
-    console.log(e.target.value);
-    if (e.target.value != '') {
-      let Arr: Array<Product> = []
-      let arr = this._ProductServiceService.productList
-      arr.filter(x => {
-        console.log(x.name.search(e.target.name));
-        if (x.name === e.target.value) {
-          Arr.push(x)
-        } else {
-          Arr = []
-        }
+  //   console.log(e.target.value);
+  //   if (e.target.value != '') {
+  //     let Arr: Array<Product> = []
+  //     let arr = this._ProductServiceService.productList
+  //     arr.filter(x => {
+  //       console.log(x.name.search(e.target.name));
+  //       if (x.name === e.target.value) {
+  //         Arr.push(x)
+  //       } else {
+  //         Arr = []
+  //       }
 
-      })
-      this._ProductServiceService.sendProductSearch(Arr);
-    } else {
-      this._ProductServiceService.sendProductSearch(this._ProductServiceService.productList);
+  //     })
+  //     this._ProductServiceService.sendProductSearch(Arr);
+  //   } else {
+  //     this._ProductServiceService.sendProductSearch(this._ProductServiceService.productList);
 
-    }
+  //   }
 
   }
+
+  /* ---------------------------------------------------------------- */
+  /*                   navbar responsive Function                     */
+  /* ---------------------------------------------------------------- */
+
   navbar() {
-    let x = document.getElementById("myTopnav") as HTMLAreaElement;
-    if (x.className === "topnav") {
-      x.className += " responsive";
+    let x = document.getElementById('myTopnav') as HTMLAreaElement;
+    if (x.className === 'topnav') {
+      x.className += ' responsive';
     } else {
-      x.className = "topnav";
+      x.className = 'topnav';
     }
   }
 }
